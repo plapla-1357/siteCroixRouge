@@ -1,0 +1,17 @@
+// pallette de couleur
+
+$main_red: #e3001b;
+$light_red: #ffd2d2;
+$uniform_grey: #ccae8b;
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.testcolor{
+    height: 100px;
+    width: 100%;
+    background-color: $uniform_grey;
+}
