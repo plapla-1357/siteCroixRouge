@@ -1,31 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Croix Rouge Française</title>
-    <link rel="icon" href="logo.ico">
+    <link rel="icon" href="logo.ico" />
 
     <!-- css -->
-    <link rel="stylesheet" href="./src/css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/css/main.css" />
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <!-- navbar -->
     <section id="navbar">
-        <img src="./src/img/logoText.png" alt="logo croix rouge française">
-        <nav>
-            <ul>
-                <li><a href="/" class="nav_button">La Croix Rouge</a></li>
-                <li><a href="/" class="nav_button">Actions</a></li>
-                <li><a href="/" class="nav_button">S'engager</a></li>
-                <li><a href="/" class="nav_button">Se Former</a></li>
-                <li><a href="/" class="button1">Donner</a></li>
+      <img src="./src/img/logoText.png" alt="logo croix rouge française" />
+      <nav>
+        <ul id="nav">
+          <li>
+            <a href="/" class="nav_button"
+              ><i class="fa-solid fa-chevron-down"></i> <b>La Croix-Rouge</b>
+            </a>
+            <ul class="menu closed">
+                <li><i class="fa-solid fa-chevron-right"></i> Un mouvement international</li>
+                <li><i class="fa-solid fa-chevron-right"></i> La Croix-Rouge Française</li>
             </ul>
+          </li>
+          <li>
+            <a href="/" class="nav_button"
+              ><i class="fa-solid fa-chevron-down"></i> <b>Actions</b>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="nav_button"
+              ><i class="fa-solid fa-chevron-down"></i> <b>S'engager</b>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="nav_button"
+              ><i class="fa-solid fa-chevron-down"></i> <b>Se Former</b>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="button1"><em>DONNER</em></a>
+          </li>
+        </ul>
+
         </nav>
     </section>
+    <section id="landingpage">
+        <img src="src/img/formation.jpg" alt="formation croix rouge">
+        <img src="./src/img/vactinations.jpg" alt="croix rouge vaccine quellequ'un">
 
-
-</body>
+    </section>
+  </body>
 </html>
