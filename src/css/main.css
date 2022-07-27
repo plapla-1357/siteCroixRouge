@@ -6,6 +6,28 @@
 
 html {
   font-size: 10px;
+  font-style: regular;
+}
+
+p {
+  font-size: 1.4rem;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+i {
+  margin-right: 15px;
+}
+
+h1 {
+  color: white;
+  font-size: 6rem;
+  text-align: center;
+  margin: 20px;
 }
 
 #navbar {
@@ -16,7 +38,7 @@ html {
   align-items: center;
   height: 80px;
   z-index: 2;
-  background-color: #423c3c92;
+  background-color: #423c3cb0;
 }
 #navbar nav {
   height: 100%;
@@ -25,7 +47,7 @@ html {
   height: 100%;
   display: flex;
 }
-#navbar nav #nav li {
+#navbar nav #nav .nav_element {
   position: relative;
   display: flex;
   align-items: center;
@@ -33,21 +55,37 @@ html {
   height: 100%;
   padding: 0px 30px 0px 10px;
 }
-#navbar nav #nav li .menu {
-  position: absolute;
-  background-color: white;
-  top: 80px;
+#navbar nav #nav .nav_element:hover .menu {
+  max-height: 300px;
+  border: 1px solid #423c3c;
 }
-#navbar nav #nav li .menu li {
+#navbar nav #nav .nav_element .menu {
+  position: absolute;
+  background-color: #423c3cb0;
+  color: white;
+  top: 80px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
+}
+#navbar nav #nav .nav_element .menu li {
   display: flex;
   flex-direction: row;
+  font-size: 1.4rem;
+  padding: 10px;
+  transition: background-color 0.4s;
+}
+#navbar nav #nav .nav_element .menu li i {
+  margin-right: 15px;
+}
+#navbar nav #nav .nav_element .menu li:hover {
+  background-color: #ccae8b;
+  cursor: pointer;
 }
 #navbar nav #nav a {
   display: flex;
   align-items: center;
-  text-decoration: none;
   padding: 15px;
-  font-size: 1.8rem;
   color: #fff;
 }
 #navbar nav #nav b {
@@ -70,6 +108,18 @@ html {
   position: relative;
 }
 .button1:hover {
+  background-color: #271c1c;
+}
+
+.button2 {
+  background-color: #ccae8b;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  transition: background-color 0.2s;
+  position: relative;
+}
+.button2:hover {
   background-color: #271c1c;
 }
 
@@ -97,12 +147,133 @@ html {
   width: 100vw;
   display: flex;
   overflow: hidden;
+  position: relative;
 }
 #landingpage img {
   min-width: 100vw;
   min-height: 100vh;
   object-fit: cover;
+  position: absolute;
+  transition: left 3s;
+  left: 100vw;
+}
+#landingpage img#img1 {
+  animation: carousel 75s linear infinite;
+  animation-delay: -65.625s;
+}
+#landingpage img#img2 {
+  animation: carousel 75s linear infinite;
+  animation-delay: -56.25s;
+}
+#landingpage img#img3 {
+  animation: carousel 75s linear infinite;
+  animation-delay: -46.875s;
+}
+#landingpage img#img4 {
+  animation: carousel 75s linear infinite;
+  animation-delay: -37.5s;
+}
+#landingpage #fond_landing_page {
+  position: absolute;
+  top: 80px;
+  left: -10vw;
+  background-color: #2d24247b;
+  height: calc(100vh - 80px);
+  width: 70vw;
+  transform: skew(20deg);
+}
+#landingpage .titre {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  height: calc(100vh - 80px);
+  width: 40vw;
+  margin-left: 5vw;
+  display: flex;
+  align-items: center;
+}
+#landingpage .titre#titre2 h1 {
+  animation-delay: 9.375s;
+}
+#landingpage .titre#titre2 p {
+  animation-delay: 9.625s;
+}
+#landingpage .titre#titre2 .button {
+  animation-delay: 9.875s;
+}
+#landingpage .titre#titre3 h1 {
+  animation-delay: 18.75s;
+}
+#landingpage .titre#titre3 p {
+  animation-delay: 19s;
+}
+#landingpage .titre#titre3 .button {
+  animation-delay: 19.25s;
+}
+#landingpage .titre .button {
   position: relative;
+  left: -100vw;
+  animation: slide_from_left 9.375s ease-in-out;
+  animation-delay: 0.5s;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#landingpage .titre p {
+  position: relative;
+  left: -100vw;
+  animation: slide_from_left 9.375s ease-in-out;
+  animation-delay: 0.25s;
+  color: white;
+  font-size: 1.9rem;
+}
+#landingpage .titre h1 {
+  position: relative;
+  left: -100vw;
+  animation: slide_from_left 9.375s ease-in-out;
+}
+
+@keyframes carousel {
+  0% {
+    left: 100vw;
+  }
+  86.5% {
+    left: 100vw;
+  }
+  87.5% {
+    left: 0;
+    transform: scale(1);
+  }
+  99% {
+    left: 0;
+    transform: scale(1.3);
+  }
+  100% {
+    left: -100vw;
+    transform: scale(1);
+  }
+}
+@keyframes slide_from_left {
+  0% {
+    left: -100vw;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    left: 0;
+    opacity: 0.7;
+  }
+  15%, 90% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: -100vw;
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
