@@ -21,6 +21,7 @@ a {
 
 i {
   margin-right: 15px;
+  transition: transfrom 0.4s;
 }
 
 h1 {
@@ -56,7 +57,7 @@ h1 {
   padding: 0px 30px 0px 10px;
 }
 #navbar nav #nav .nav_element:hover .menu {
-  max-height: 300px;
+  max-height: 800px;
   border: 1px solid #423c3c;
 }
 #navbar nav #nav .nav_element .menu {
@@ -70,17 +71,47 @@ h1 {
 }
 #navbar nav #nav .nav_element .menu li {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 1.4rem;
-  padding: 10px;
+  max-height: 900px;
+  overflow: hidden;
   transition: background-color 0.4s;
+  transition: max-height 0.4s;
 }
 #navbar nav #nav .nav_element .menu li i {
   margin-right: 15px;
 }
-#navbar nav #nav .nav_element .menu li:hover {
+#navbar nav #nav .nav_element .menu li .element_title {
+  padding: 10px;
+}
+#navbar nav #nav .nav_element .menu li .element_title.arrow i {
+  transform: rotate(90deg);
+}
+#navbar nav #nav .nav_element .menu li .element_title:hover {
   background-color: #ccae8b;
+  color: black;
   cursor: pointer;
+}
+#navbar nav #nav .nav_element .menu li .sous_menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
+  margin-left: 30px;
+}
+#navbar nav #nav .nav_element .menu li .sous_menu li {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#navbar nav #nav .nav_element .menu li .sous_menu li:hover {
+  background-color: #ffd2d2;
+  color: black;
+}
+#navbar nav #nav .nav_element .menu li .sous_menu.open {
+  max-height: 600px;
+}
+#navbar nav #nav .nav_element .menu li.closed {
+  max-height: 0;
 }
 #navbar nav #nav a {
   display: flex;
@@ -106,20 +137,9 @@ h1 {
   padding: 15px 20px;
   transition: background-color 0.2s;
   position: relative;
+  display: inline-block;
 }
 .button1:hover {
-  background-color: #271c1c;
-}
-
-.button2 {
-  background-color: #ccae8b;
-  color: white;
-  border-radius: 10px;
-  padding: 15px 20px;
-  transition: background-color 0.2s;
-  position: relative;
-}
-.button2:hover {
   background-color: #271c1c;
 }
 
@@ -156,22 +176,28 @@ h1 {
   position: absolute;
   transition: left 3s;
   left: 100vw;
+  animation: carousel 75s linear infinite;
 }
 #landingpage img#img1 {
-  animation: carousel 75s linear infinite;
   animation-delay: -65.625s;
 }
 #landingpage img#img2 {
-  animation: carousel 75s linear infinite;
   animation-delay: -56.25s;
 }
 #landingpage img#img3 {
-  animation: carousel 75s linear infinite;
   animation-delay: -46.875s;
 }
 #landingpage img#img4 {
-  animation: carousel 75s linear infinite;
   animation-delay: -37.5s;
+}
+#landingpage img#img5 {
+  animation-delay: -28.125s;
+}
+#landingpage img#img6 {
+  animation-delay: -18.75s;
+}
+#landingpage img#img7 {
+  animation-delay: -9.375s;
 }
 #landingpage #fond_landing_page {
   position: absolute;
@@ -185,7 +211,7 @@ h1 {
 #landingpage .titre {
   position: absolute;
   top: 80px;
-  left: 0;
+  left: -100vw;
   height: calc(100vh - 80px);
   width: 40vw;
   margin-left: 5vw;
@@ -210,10 +236,55 @@ h1 {
 #landingpage .titre#titre3 .button {
   animation-delay: 19.25s;
 }
+#landingpage .titre#titre4 h1 {
+  animation-delay: 28.125s;
+}
+#landingpage .titre#titre4 p {
+  animation-delay: 28.375s;
+}
+#landingpage .titre#titre4 .button {
+  animation-delay: 28.625s;
+}
+#landingpage .titre#titre5 h1 {
+  animation-delay: 37.5s;
+}
+#landingpage .titre#titre5 p {
+  animation-delay: 37.75s;
+}
+#landingpage .titre#titre5 .button {
+  animation-delay: 38s;
+}
+#landingpage .titre#titre6 h1 {
+  animation-delay: 46.875s;
+}
+#landingpage .titre#titre6 p {
+  animation-delay: 47.125s;
+}
+#landingpage .titre#titre6 .button {
+  animation-delay: 47.375s;
+}
+#landingpage .titre#titre7 h1 {
+  animation-delay: 56.25s;
+}
+#landingpage .titre#titre7 p {
+  animation-delay: 56.5s;
+}
+#landingpage .titre#titre7 .button {
+  animation-delay: 56.75s;
+}
+#landingpage .titre#titre8 h1 {
+  animation-delay: 65.625s;
+}
+#landingpage .titre#titre8 p {
+  animation-delay: 65.875s;
+}
+#landingpage .titre#titre8 .button {
+  animation-delay: 66.125s;
+}
 #landingpage .titre .button {
   position: relative;
   left: -100vw;
-  animation: slide_from_left 9.375s ease-in-out;
+  animation: slide_from_left 75s ease-in-out infinite;
   animation-delay: 0.5s;
   height: 100px;
   display: flex;
@@ -223,7 +294,7 @@ h1 {
 #landingpage .titre p {
   position: relative;
   left: -100vw;
-  animation: slide_from_left 9.375s ease-in-out;
+  animation: slide_from_left 75s ease-in-out infinite;
   animation-delay: 0.25s;
   color: white;
   font-size: 1.9rem;
@@ -231,7 +302,38 @@ h1 {
 #landingpage .titre h1 {
   position: relative;
   left: -100vw;
-  animation: slide_from_left 9.375s ease-in-out;
+  animation: slide_from_left 75s ease-in-out infinite;
+}
+#landingpage #nav_carousel {
+  display: flex;
+  position: absolute;
+  top: 90vh;
+  left: 50vh;
+}
+#landingpage #nav_carousel .button_nav_carrousel {
+  height: 3px;
+  width: 25px;
+  margin: 10px;
+  padding: 3px;
+}
+#landingpage #nav_carousel .button_nav_carrousel::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  background-color: #ccae8b;
+  transition: background-color 0.4s;
+}
+#landingpage #nav_carousel .button_nav_carrousel:hover::before {
+  background-color: #271c1c;
+}
+#landingpage #nav_carousel #selector {
+  background-color: #e3001b;
+  height: 6px;
+  width: 30px;
+  margin: 11px;
+  position: absolute;
+  animation: selector 75s linear infinite;
 }
 
 @keyframes carousel {
@@ -256,23 +358,52 @@ h1 {
 }
 @keyframes slide_from_left {
   0% {
-    left: -100vw;
+    transform: translateX(100vw);
     opacity: 0;
   }
-  5% {
+  0.6% {
     opacity: 0;
   }
-  10% {
-    left: 0;
+  1.25% {
+    transform: translateX(200vw);
     opacity: 0.7;
   }
-  15%, 90% {
-    left: 0;
+  1.9%, 11.25% {
+    transform: translateX(200vw);
     opacity: 1;
   }
-  100% {
-    left: -100vw;
+  12.25%, 100% {
+    transform: translateX(100vw);
     opacity: 0;
+  }
+}
+@keyframes selector {
+  0%, 11.5% {
+    left: 0;
+  }
+  12.5%, 24% {
+    left: 51px;
+  }
+  25%, 36.5% {
+    left: 102px;
+  }
+  37.5%, 49% {
+    left: 153px;
+  }
+  50%, 61.5% {
+    left: 204px;
+  }
+  62.5%, 74% {
+    left: 255px;
+  }
+  75%, 86.5% {
+    left: 306px;
+  }
+  87.5%, 99% {
+    left: 357px;
+  }
+  100% {
+    left: 0;
   }
 }
 

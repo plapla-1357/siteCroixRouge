@@ -16,6 +16,7 @@ $landing_page_grey: #2d24247b;
 html{
     font-size: 10px;
     font-style: regular;
+
 }
 
 p{
@@ -30,6 +31,7 @@ a{
 
 i{
     margin-right: 15px;
+    transition: transfrom 0.4s;
 }
 
 h1{
@@ -38,7 +40,6 @@ h1{
     text-align: center;
     margin: 20px;
 }
-
 
 
 $nav_height: 80px;
@@ -67,7 +68,7 @@ $nav_height: 80px;
                 height: 100%;
                 padding: 0px 30px 0px 10px;
                 &:hover .menu{
-                    max-height: 300px;
+                    max-height: 800px;
                     border: 1px solid $nav_grey_no_transparent;
                 }
                 
@@ -83,17 +84,48 @@ $nav_height: 80px;
                     transition: max-height 0.4s;
                     li{
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         font-size: 1.4rem;
-                        padding: 10px;
+                        max-height: 900px;
+                        overflow: hidden;
                         i{
                             margin-right: 15px;
                         }
                         transition: background-color 0.4s;
-                        &:hover{
+                        .element_title{
+                            padding:10px;
+                            &.arrow{
+                                i{
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+                        .element_title:hover{
                             background-color: $uniform_grey;
+                            color: black;
                             cursor: pointer;
                         }
+                        .sous_menu{
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.4s;
+                            margin-left: 30px;
+                            li{
+                                padding: 10px;
+                                display: flex;
+                                flex-direction: row;
+                                &:hover{
+                                    background-color: $light_red;
+                                    color: black;
+                                }
+                            }
+                            &.open{
+                                max-height: 600px;
+                            }
+                        }&.closed{
+                            max-height: 0;
+                        }
+                        transition: max-height 0.4s
                     }
 
                 }
@@ -126,17 +158,7 @@ $nav_height: 80px;
     padding:15px 20px;
     transition: background-color 0.2s;
     position: relative;
-    &:hover{
-        background-color: #271c1c;
-    }
-}
-.button2{
-    background-color: $uniform_grey;
-    color: white;
-    border-radius: 10px;
-    padding:15px 20px;
-    transition: background-color 0.2s;
-    position: relative;
+    display: inline-block;
     &:hover{
         background-color: #271c1c;
     }
@@ -180,20 +202,25 @@ $time_animation: 75s;
         position: absolute;
         transition: left 3s; 
         left: 100vw;
+        animation: carousel $time_animation linear infinite;
         &#img1{
-            animation: carousel $time_animation linear infinite;
             animation-delay: calc($time_animation / 8 * (-7));
         }
         &#img2{
-            animation: carousel $time_animation linear infinite;
             animation-delay: calc($time_animation / 8 * (-6))
 
         }&#img3{
-            animation: carousel $time_animation linear infinite;
             animation-delay: calc($time_animation / 8 * (-5));
         }&#img4{
-            animation: carousel $time_animation linear infinite;
             animation-delay: calc($time_animation / 8 * (-4));
+        }&#img5{
+            animation-delay: calc($time_animation / 8 * (-3));
+        }
+        &#img6{
+            animation-delay: calc($time_animation / 8 * (-2));
+        }
+        &#img7{
+            animation-delay: calc($time_animation / 8 * (-1));
         }
     }
     #fond_landing_page{
@@ -227,9 +254,59 @@ $time_animation: 75s;
                 animation-delay: calc($time_animation *2 / 8 + 0.5s)
             }   
         }
+        &#titre4{
+            h1{
+                animation-delay: calc($time_animation *3 / 8)
+            }p{
+                animation-delay: calc($time_animation *3 / 8 + 0.25s)
+
+            }.button{
+                animation-delay: calc($time_animation *3 / 8 + 0.5s)
+            }   
+        }
+        &#titre5{
+            h1{
+                animation-delay: calc($time_animation * 4 / 8)
+            }p{
+                animation-delay: calc($time_animation * 4 / 8 + 0.25s)
+
+            }.button{
+                animation-delay: calc($time_animation *4 / 8 + 0.5s)
+            }   
+        }
+        &#titre6{
+            h1{
+                animation-delay: calc($time_animation * 5 / 8)
+            }p{
+                animation-delay: calc($time_animation * 5 / 8 + 0.25s)
+
+            }.button{
+                animation-delay: calc($time_animation * 5 / 8 + 0.5s);
+            }   
+        }
+        &#titre7{
+            h1{
+                animation-delay: calc($time_animation * 6 / 8)
+            }p{
+                animation-delay: calc($time_animation * 6 / 8 + 0.25s)
+
+            }.button{
+                animation-delay: calc($time_animation * 6 / 8 + 0.5s);
+            }   
+        }
+        &#titre8{
+            h1{
+                animation-delay: calc($time_animation * 7 / 8)
+            }p{
+                animation-delay: calc($time_animation * 7 / 8 + 0.25s)
+
+            }.button{
+                animation-delay: calc($time_animation * 7 / 8 + 0.5s);
+            }   
+        }
         position: absolute;
         top: $nav_height;
-        left:0;
+        left: -100vw;
         height: calc(100vh - $nav_height);
         width: 40vw;
         margin-left: 5vw;
@@ -239,7 +316,7 @@ $time_animation: 75s;
         .button{
             position: relative;
             left: -100vw;
-            animation: slide_from_left calc($time_animation / 8) ease-in-out;
+            animation: slide_from_left $time_animation ease-in-out infinite;
             animation-delay: 0.5s;
             height: 100px;
             display: flex;
@@ -249,7 +326,7 @@ $time_animation: 75s;
         p{
             position: relative;
             left: -100vw;
-            animation: slide_from_left calc($time_animation / 8) ease-in-out;
+            animation: slide_from_left $time_animation ease-in-out infinite;
             animation-delay: 0.25s;
             color: white;
             font-size: 1.9rem;
@@ -257,10 +334,42 @@ $time_animation: 75s;
         h1{
             position: relative;
             left: -100vw;
-            animation: slide_from_left calc($time_animation / 8) ease-in-out;
+            animation: slide_from_left $time_animation ease-in-out infinite;
+        }
+    }
+    #nav_carousel{
+        display: flex;
+        position: absolute;
+        top: 90vh;
+        left: 50vh;
+        .button_nav_carrousel{
+            height: 3px;
+            width: 25px;
+            margin: 10px;
+            padding: 3px;
+            &::before{
+                content:"";
+                position: absolute;
+                height: 3px;
+                width: 25px;
+                background-color: $uniform_grey;
+                transition: background-color 0.4s;
+                
+            }
+            &:hover::before {background-color:#271c1c}
+        }
+        #selector{
+            background-color:$main_red;
+            height: 6px;
+            width: 30px;
+            margin: 11px;
+            position: absolute;
+            animation: selector $time_animation linear infinite;
+            
         }
     }
 }
+
 
 
 //animations
@@ -283,20 +392,43 @@ $time_animation: 75s;
 
 @keyframes slide_from_left {
     0%{
-        left: -100vw;
+        transform: translateX(100vw);
         opacity: 0;
-    }5%{
+    }0.6%{
         opacity: 0;
-    }10%{
-        left:0;
+    }1.25%{
+        transform: translateX(200vw);
         opacity: 0.7;
-    }15%, 90%{
-        left: 0;
+    }1.9%, 11.25%{
+        transform: translateX(200vw);
         opacity: 1;
-    }100%{
-        left: -100vw;
+    }12.25%, 100%{
+        transform: translateX(100vw);
         opacity: 0;
     }
+}
+
+@keyframes selector {
+    0%, 11.5%{
+        left: 0;
+    }12.5%, 24%{
+        left: 51px;
+    }25%, 36.5%{
+        left: 102px;
+    }37.5%, 49%{
+        left: 153px;
+    }50%, 61.5%{
+        left: 204px;
+    }62.5%, 74%{
+        left: 255px;
+    }75%, 86.5%{
+        left: 306px;
+    }87.5%, 99%{
+        left: 357px;
+    }100%{
+        left: 0;
+    }
+    
 }
 
 

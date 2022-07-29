@@ -1,145 +1,381 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Croix Rouge Française</title>
-    <link rel="icon" href="logo.ico" />
 
-    <!-- css -->
-    <link rel="stylesheet" href="./src/css/main.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Croix Rouge Française</title>
+  <link rel="icon" href="./src/img/logo.ico" />
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- js -->
+  <script src="src/js/main.js" defer></script>
+  <script src="src/js/nav.js" defer></script>
 
-    <!-- fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!-- navbar -->
-    <section id="navbar">
-      <img src="./src/img/logoText.png" alt="logo croix rouge française" />
-      <nav>
-        <ul id="nav">
-          <li class="nav_element">
-            <a href="/" class="nav_button"
-              ><i class="fa-solid fa-chevron-down"></i> <b>La Croix-Rouge</b>
-            </a>
-            <ul class="menu">
-                <li><i class="fa-solid fa-chevron-right"></i> Un mouvement international</li>
-                <li><i class="fa-solid fa-chevron-right"></i> La Croix-Rouge Française</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Droit International Humanitaire</li> 
-                <li><i class="fa-solid fa-chevron-right"></i> Fondation Croix-Rouge Française</li> 
-                <li><i class="fa-solid fa-chevron-right"></i> Croix-Rouge Insertion</li> 
-                <li><i class="fa-solid fa-chevron-right"></i> Innovation Social</li> 
-            </ul>
-          </li>
-          <li class="nav_element">
-            <a href="/" class="nav_button"
-              ><i class="fa-solid fa-chevron-down"></i> <b>Actions</b>
-            </a>
-            <ul class="menu">
-                <li><i class="fa-solid fa-chevron-right"></i> Urgence Secourisme</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Formation</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Santé Autonomie</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Action Social</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Action International</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Espace Jeunesse</li>
-            </ul>
-          </li>
-          <li class="nav_element">
-            <a href="/" class="nav_button"
-              ><i class="fa-solid fa-chevron-down"></i> <b>S'engager</b>
-            </a>
-            <ul class="menu">
-                <li><i class="fa-solid fa-chevron-right"></i>Bénevolat</li>
-                <li><i class="fa-solid fa-chevron-right"></i>Espace Recrutement</li>
-                <li><i class="fa-solid fa-chevron-right"></i>Travailler  à l'international</li>
-                <li><i class="fa-solid fa-chevron-right"></i>Volontaire en service civique</li>
-                <li><i class="fa-solid fa-chevron-right"></i>Nos Boutiques Solidaires</li>
-            </ul>
-          </li>
-          <li class="nav_element">
-            <a href="/" class="nav_button"
-              ><i class="fa-solid fa-chevron-down"></i> <b>Se Former</b>
-            </a>
-            <ul class="menu">
-                <li><i class="fa-solid fa-chevron-right"></i>Particulier</li>
-                <li><i class="fa-solid fa-chevron-right"></i>Etudiant</li>
-                <li><i class="fa-solid fa-chevron-right"></i>Professionnels</li>
-            </ul>
-          </li>
-          <li class="nav_element">
-            <a href="/" class="button1"><em>DONNEZ</em></a>
-          </li>
-        </ul>
+  <!-- css -->
+  <link rel="stylesheet" href="./src/css/main.css" />
 
-        </nav>
-    </section>
-    <section id="landingpage">
-        <img src="src/img/croix-ROUGEfromation.jpg" alt="formation croix rouge" id="img1">
-        <img src="./src/img/La-Croix-Rouge-Vaccination.jpg" alt="croix rouge vaccine quellequ'un" id="img2">
-        <img src="./src/img/ukraine.jpg" alt="stock de la croix rouge pour l'ukraine" id="img3">
-        <img src="./src/img/secours2.jpg" alt="personne secouru par la Croix-Rouge" id="img4">
-        <img src="./src/img/actionSocial.jpg" alt="personne aidée par la Croix-Rouge" id="img4">
-        <img src="./src/img/don.jpg" alt="personne de la Croix-Rouge qui font la quête" id="img4">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
 
-        <div id="fond_landing_page">
-            
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <section id="navbar">
+    <img src="./src/img/logoText.png" alt="logo croix rouge française" />
+    <nav>
+      <ul id="nav">
+        <li class="nav_element">
+          <a href="/" class="nav_button"><i class="fa-solid fa-chevron-down"></i> <b>La Croix-Rouge</b>
+          </a>
+          <ul class="menu">
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Un mouvement
+                international
+              </div>
+              <ul class="sous_menu">
+                <li><i class="fa-solid fa-arrow-right-long"></i>Origine</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Organisation</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>7 principes fondateurs</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Un embleme protecteur</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Les convension de genève</li>
+              </ul>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> La Croix-Rouge
+                Française
+              </div>
+              <ul class="sous_menu">
+                <li><i class="fa-solid fa-arrow-right-long"></i>Cartes D'identité</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Notre histoire</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Organisation et fonctionnement</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Transformation et RSO</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Ressource et transparence</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Offres de services au collectivités</li>
+
+              </ul>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Droit International
+                Humanitaire
+              </div>
+              <ul class="sous_menu">
+                <li><i class="fa-solid fa-arrow-right-long"></i>Comprendre le Droit International Humanitaire</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>5 principe fondamentaux</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Faire respecter le DIH</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Difuser le DIH</li>
+              </ul>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Fondation
+                Croix-Rouge Française
+              </div>
+              <ul class="sous_menu">
+                <li><i class="fa-solid fa-arrow-right-long"></i>En savoir plus ...</li>
+              </ul>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Croix-Rouge
+                Insertion
+              </div>
+              <ul class="sous_menu">
+                <li><i class="fa-solid fa-arrow-right-long"></i>Presentation</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Filières et Solutions</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Etablissements</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Filiales</li>
+                
+              </ul>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Innovation Social
+              </div>
+              <ul class="sous_menu">
+                <li><i class="fa-solid fa-arrow-right-long"></i>L'innovation Social à la Croix-Rouge Française</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Croix-Rouge mobilité</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>21: l'accelerateur d'innovations sociales</li>
+                <li><i class="fa-solid fa-arrow-right-long"></i>Projets</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav_element">
+          <a href="/" class="nav_button"><i class="fa-solid fa-chevron-down"></i> <b>Actions</b>
+          </a>
+          <ul class="menu">
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Urgence Secourisme
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Formation
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Santé Autonomie
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Action Social
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Action International
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i> Espace Jeunesse
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="nav_element">
+          <a href="/" class="nav_button"><i class="fa-solid fa-chevron-down"></i> <b>S'engager</b>
+          </a>
+          <ul class="menu">
+            <li class="sous_nav_element">
+              <div class="element_title">
+                <i class="fa-solid fa-chevron-right"></i>Bénevolat
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+
+                <i class="fa-solid fa-chevron-right"></i>Espace Recrutement
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+
+                <i class="fa-solid fa-chevron-right"></i>Travailler à
+                l'international
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+
+                <i class="fa-solid fa-chevron-right"></i>Volontaire en service
+                civique
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+
+                <i class="fa-solid fa-chevron-right"></i>Nos Boutiques
+                Solidaires
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="nav_element">
+          <a href="/" class="nav_button"><i class="fa-solid fa-chevron-down"></i> <b>Se Former</b>
+          </a>
+          <ul class="menu">
+            <li class="sous_nav_element">
+              <div class="element_title">
+
+                <i class="fa-solid fa-chevron-right"></i>Particulier
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+
+                <i class="fa-solid fa-chevron-right"></i>Etudiant
+              </div>
+            </li>
+            <li class="sous_nav_element">
+              <div class="element_title">
+
+                <i class="fa-solid fa-chevron-right"></i>Professionnels
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="nav_element">
+          <a href="/" class="button1"><em>DONNEZ</em></a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section id="landingpage">
+    <img class="img_landingpage" src="src/img/croix-ROUGEfromation.jpg" alt="formation croix rouge" id="img1" />
+    <img class="img_landingpage" src="./src/img/La-Croix-Rouge-Vaccination.jpg" alt="croix rouge vaccine quellequ'un"
+      id="img2" />
+    <img class="img_landingpage" src="./src/img/ukraine.jpg" alt="stock de la croix rouge pour l'ukraine" id="img3" />
+    <img class="img_landingpage" src="./src/img/secours2.jpg" alt="personne secouru par la Croix-Rouge" id="img4" />
+    <img class="img_landingpage" src="./src/img/actionSocial.jpg" alt="personne aidée par la Croix-Rouge" id="img5" />
+    <img class="img_landingpage" src="./src/img/don.jpg" alt="personne de la Croix-Rouge qui font la quête" id="img6" />
+    <img class="img_landingpage" src="./src/img/benevolat.jpg" alt="groupe de bénévole de la Croix-Rouge" id="img7" />
+    <img class="img_landingpage" src="./src/img/croix-rouge_jeunesse.jpg" alt="groupe d'enfant avec la Croix-Rouge"
+      id="img8" />
+
+    <div id="fond_landing_page"></div>
+    <div id="titre1" class="titre">
+      <div class="wrapper">
+        <h1>Fromations</h1>
+        <p>
+          lorem id ipsum dolor sit amet, consectetur adipis lorem lorem id
+          ipsum dolor sit amet, consectetur adipis lorem lorem id ipsum dolor
+          sit amet, consectetur adipis lorem lorem id ipsum dolor sit amet,
+          consectetur adipis lorem lorem id ipsum dolor sit amet, consectetur
+          adipis lorem lorem id ipsum dolor sit amet, consectetur adipis lorem
+        </p>
+        <div class="button">
+          <a href="/" class="button1">
+            <i class="fa-solid fa-chevron-right"></i>Decouvrir les formations
+          </a>
         </div>
-        <div id="titre1" class="titre">
-            <div class="wrapper">               
-                <h1>Se Former</h1>
-                <p>
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                </p>
-                <div class="button"><a href="/" class="button1"> <i class="fa-solid fa-chevron-right"></i>En Savoir plus </a></div>
-            </div>
+      </div>
+    </div>
+    <div id="titre2" class="titre">
+      <div class="wrapper">
+        <h1>Santé et Autonomie</h1>
+        <p>
+          lorem id ipsum dolor sit amet, consectetur adipis lorem lorem id
+          ipsum dolor sit amet, consectetur adipis lorem lorem id ipsum dolor
+          sit amet, consectetur adipis lorem lorem id ipsum dolor sit amet,
+          consectetur adipis lorem lorem id ipsum dolor sit amet, consectetur
+          adipis lorem lorem id ipsum dolor sit amet, consectetur adipis lorem
+        </p>
+        <div class="button">
+          <a href="/" class="button1">
+            <i class="fa-solid fa-chevron-right"></i>En Savoir plus
+          </a>
         </div>
-        <div id="titre2" class="titre">
-            <div class="wrapper">               
-                <h1> Santé et Autonomie</h1>
-                <p>
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                </p>
-                <div class="button"><a href="/" class="button1"> <i class="fa-solid fa-chevron-right"></i>En Savoir plus </a></div>
-            </div>
-        <div id="titre3" class="titre">
-            <div class="wrapper">               
-                <h1> Action International</h1>
-                <p>
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                    lorem id ipsum dolor sit amet, consectetur adipis lorem
-                </p>
-                <div class="button"><a href="/" class="button1"> <i class="fa-solid fa-chevron-right"></i>En Savoir plus </a></div>
-            </div>
+      </div>
+    </div>
+    <div id="titre3" class="titre">
+      <div class="wrapper">
+        <h1>Action International</h1>
+        <p>
+          lorem id ipsum dolor sit amet, consectetur adipis lorem lorem id
+          ipsum dolor sit amet, consectetur adipis lorem lorem id ipsum dolor
+          sit amet, consectetur adipis lorem lorem id ipsum dolor sit amet,
+          consectetur adipis lorem lorem id ipsum dolor sit amet, consectetur
+          adipis lorem lorem id ipsum dolor sit amet, consectetur adipis lorem
+        </p>
+        <div class="button">
+          <a href="/" class="button1">
+            <i class="fa-solid fa-chevron-right"></i>En Savoir plus
+          </a>
         </div>
-    </section>
-  </body>
+      </div>
+    </div>
+    <div id="titre4" class="titre">
+      <div class="wrapper">
+        <h1>Urgence et Secourisme</h1>
+        <p>
+          lorem id ipsum dolor sit amet, consectetur adipis lorem lorem id
+          ipsum dolor sit amet, consectetur adipis lorem lorem id ipsum dolor
+          sit amet, consectetur adipis lorem lorem id ipsum dolor sit amet,
+          consectetur adipis lorem lorem id ipsum dolor sit amet, consectetur
+          adipis lorem lorem id ipsum dolor sit amet, consectetur adipis lorem
+        </p>
+        <div class="button">
+          <a href="/" class="button1">
+            <i class="fa-solid fa-chevron-right"></i>En Savoir plus
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="titre5" class="titre">
+      <div class="wrapper">
+        <h1>Action Social</h1>
+        <p>
+          lorem id ipsum dolor sit amet, consectetur adipis lorem lorem id
+          ipsum dolor sit amet, consectetur adipis lorem lorem id ipsum dolor
+          sit amet, consectetur adipis lorem lorem id ipsum dolor sit amet,
+          consectetur adipis lorem lorem id ipsum dolor sit amet, consectetur
+          adipis lorem lorem id ipsum dolor sit amet, consectetur adipis lorem
+        </p>
+        <div class="button">
+          <a href="/" class="button1">
+            <i class="fa-solid fa-chevron-right"></i>En Savoir plus
+          </a>
+        </div>
+      </div>
+    </div>
+    2
+    <div id="titre6" class="titre">
+      <div class="wrapper">
+        <h1>Soutenir la Croix-Rouge</h1>
+        <p>
+          lorem id ipsum dolor sit amet, consectetur adipis lorem lorem id
+          ipsum dolor sit amet, consectetur adipis lorem lorem id ipsum dolor
+          sit amet, consectetur adipis lorem lorem id ipsum dolor sit amet,
+          consectetur adipis lorem lorem id ipsum dolor sit amet, consectetur
+          adipis lorem lorem id ipsum dolor sit amet, consectetur adipis lorem
+        </p>
+        <div class="button">
+          <a href="/" class="button1">
+            <i class="fa-solid fa-chevron-right"></i>En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div id="titre7" class="titre">
+      <div class="wrapper">
+        <h1>Devenir Bénévole</h1>
+        <p>
+          La Croix-Rouge française propose près de 120 missions bénévoles et
+          il y en a forcément une qui vous correspond ! Envie de rejoindre les
+          équipes de la Croix-Rouge près de chez vous? La Croix-Rouge
+          française de votre ville a peut-être besoin de bénévoles! Les
+          missions sont diverses et les rencontres multiples. Rejoindre la
+          Croix-Rouge c'est faire partie d'une association de 60 000 bénévoles
+          et d'adhérer à des principes de solidarité et d'humanité.
+        </p>
+        <div class="button">
+          <a href="/" class="button1">
+            <i class="fa-solid fa-chevron-right"></i>En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div id="titre8" class="titre">
+      <div class="wrapper">
+        <h1>Jeunesse</h1>
+        <p>
+          lorem id ipsum dolor sit amet, consectetur adipis lorem lorem id
+          ipsum dolor sit amet, consectetur adipis lorem lorem id ipsum dolor
+          sit amet, consectetur adipis lorem lorem id ipsum dolor sit amet,
+          consectetur adipis lorem lorem id ipsum dolor sit amet, consectetur
+          adipis lorem lorem id ipsum dolor sit amet
+        </p>
+        <div class="button">
+          <a href="/" class="button1">
+            <i class="fa-solid fa-chevron-right"></i>En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div id="nav_carousel">
+      <span class="button_nav_carrousel"></span>
+      <span class="button_nav_carrousel"></span>
+      <span class="button_nav_carrousel"></span>
+      <span class="button_nav_carrousel"></span>
+      <span class="button_nav_carrousel"></span>
+      <span class="button_nav_carrousel"></span>
+      <span class="button_nav_carrousel"></span>
+      <span class="button_nav_carrousel"></span>
+      <span id="selector"></span>
+    </div>
+  </section>
+</body>
+
 </html>
