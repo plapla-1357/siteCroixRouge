@@ -7,10 +7,27 @@
 html {
   font-size: 10px;
   font-style: regular;
+  overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e3001b;
+  border-radius: 5px;
+  width: 6px;
+}
+
+::selection {
+  background-color: #e3001a72;
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-left: 20px;
 }
 
@@ -27,6 +44,28 @@ i {
 h1 {
   color: white;
   font-size: 6rem;
+  text-align: center;
+  margin: 20px;
+}
+
+h2 {
+  color: black;
+  font-size: 6rem;
+  margin: 20px;
+  position: relative;
+}
+h2:before {
+  content: "";
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  height: 2px;
+  width: 95%;
+  background-color: #e3001b;
+}
+
+h3 {
+  font-size: 3rem;
   text-align: center;
   margin: 20px;
 }
@@ -103,8 +142,14 @@ h1 {
   display: flex;
   flex-direction: row;
 }
+#navbar nav #nav .nav_element .menu li .sous_menu li a {
+  font-size: 1.5rem;
+  padding: 0px;
+}
 #navbar nav #nav .nav_element .menu li .sous_menu li:hover {
   background-color: #ffd2d2;
+}
+#navbar nav #nav .nav_element .menu li .sous_menu li:hover a {
   color: black;
 }
 #navbar nav #nav .nav_element .menu li .sous_menu.open {
@@ -138,6 +183,9 @@ h1 {
   transition: background-color 0.2s;
   position: relative;
   display: inline-block;
+  font-size: 1.5rem;
+  float: right;
+  margin-top: 10px;
 }
 .button1:hover {
   background-color: #271c1c;
@@ -334,6 +382,80 @@ h1 {
   margin: 11px;
   position: absolute;
   animation: selector 75s linear infinite;
+}
+
+#don {
+  display: flex;
+  margin-left: 20px;
+  height: 100vh;
+}
+#don .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 100px;
+}
+#don .background {
+  position: relative;
+  background-color: #ffd2d2;
+  border-radius: 50% 0% 0% 50%;
+  height: 30vw;
+  min-width: 30vw;
+  display: flex;
+  align-items: center;
+}
+#don img {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+#don p {
+  margin: 0rem 10rem;
+}
+#don br {
+  content: " ";
+  display: block;
+  margin: 10px 0;
+  line-height: 10px;
+}
+#don .item {
+  background-color: white;
+  border: 2px solid #ccae8b;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 20px;
+  color: black;
+  transition: background-color 0.4s;
+}
+#don .item:hover {
+  background-color: #ffd2d2;
+}
+#don .all_items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  margin-left: 13rem;
+  margin-right: 5rem;
+}
+#don .button1 {
+  font-size: 1.5rem;
+  float: right;
+  margin-top: 10px;
+}
+
+#formations {
+  padding-left: 20px;
+  height: 100vh;
+  background-color: #423c3c;
+  color: white;
+}
+#formations h2 {
+  color: white;
+}
+#formations img {
+  height: 50vh;
+  width: auto;
+  float: left;
 }
 
 @keyframes carousel {
