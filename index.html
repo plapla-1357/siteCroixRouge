@@ -14,6 +14,7 @@
 
   <!-- css -->
   <link rel="stylesheet" href="./src/css/main.css" />
+  <link rel="stylesheet" href="./src/css/nav.css">
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,8 +31,21 @@
   <!-- navbar -->
   <section id="navbar">
     <img src="./src/img/logoText.png" alt="logo croix rouge française" />
+    <div id="burger">
+      <span>helo</span>
+    </div>
     <nav>
       <ul id="nav">
+        <!-- structure -->
+            <!-- 
+              li.nav_element
+                ul.menu
+                  li.sous_nav_element
+                    ul.sous_menu 
+                      li
+
+             -->
+        <!-- //structure -->
         <li class="nav_element">
           <a href="/" class="nav_button"><i class="fa-solid fa-chevron-down"></i> <b>La Croix-Rouge</b>
           </a>
@@ -210,7 +224,7 @@
           </ul>
         </li>
         <li class="nav_element">
-          <a href="/" class="button1"><em>DONNEZ</em></a>
+          <a href="#don" class="button1"><em>DONNEZ</em></a>
         </li>
       </ul>
     </nav>
@@ -407,6 +421,39 @@
     <img src="src/img/formation.jpg" alt="">
     <p>Dans le secteur de la formation initiale, La Croix-Rouge française forme chaque année 14.000 élèves. Nos professionnels assurent, au sein de nos 102 écoles, la formation de 12% du personnel diplômé en France dans les formations :</p>
   </section>
+
+
+
+
+
+  <footer>
+    <div id="infos">
+      <div class="info"><i class="fa-solid fa-location-dot"></i> 98 rue Didot, 75694 Paris Cedex 14</div>
+      <div class="info"><i class="fa-solid fa-phone"></i> +33 (0)1 44 43 11 00</div>
+      <div class="all_resaux">
+        <a href="https://twitter.com/CroixRouge" target="blank" class="resaux twitter"><div class="wrapper"><i class="fa-brands fa-twitter"></i></div></a>
+        <a href="https://www.facebook.com/fr.CroixRouge" target="blank" class="resaux facebook"><div class="wrapper"><i class="fa-brands fa-facebook-f"></i></div></a>
+        <a href="https://www.instagram.com/croixrougefr/" target="blank" class="resaux instagram"><div class="wrapper"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="https://www.youtube.com/user/CroixRougeFR" target="blank" class="resaux youtube"><div class="wrapper"><i class="fa-brands fa-youtube"></i></div></a>
+        <a href="https://www.tiktok.com/@croixrougefr" target="blank" class="resaux tiktok"><div class="wrapper"><i class="fa-brands fa-tiktok"></i></div></a>
+      </div>
+    </div>
+    <div class="legal">
+      <a href="">Annulaire</a>
+      <a href="">Contacts</a>
+      <a href="">Emplois</a>
+      <a href="">Plan du site</a>
+      <a href="">Autres Sites</a>
+      <a href="">Abonnement RSS</a>
+    </div>
+    <div class="legal">
+      <a href="">Mentions Legals</a>
+      <a href="">Conditions Generals D'Utilisations</a>
+      <a href="">Politique de protection des données personnelles</a>
+      <a href="">Politique de cookies</a>
+      <a href="">Préférences de cookies</a>
+    </div>
+  </footer>
 </body>
 
 </html>

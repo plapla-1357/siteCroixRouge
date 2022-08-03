@@ -1,31 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-html {
-  font-size: 10px;
-  font-style: regular;
-  overflow: overlay;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #e3001b;
-  border-radius: 5px;
-  width: 6px;
-}
-
-::selection {
-  background-color: #e3001a72;
-}
-
 p {
   font-size: 1.6rem;
   margin-left: 20px;
@@ -70,146 +42,6 @@ h3 {
   margin: 20px;
 }
 
-#navbar {
-  position: absolute;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  z-index: 2;
-  background-color: #423c3cb0;
-}
-#navbar nav {
-  height: 100%;
-}
-#navbar nav #nav {
-  height: 100%;
-  display: flex;
-}
-#navbar nav #nav .nav_element {
-  position: relative;
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  height: 100%;
-  padding: 0px 30px 0px 10px;
-}
-#navbar nav #nav .nav_element:hover .menu {
-  max-height: 800px;
-  border: 1px solid #423c3c;
-}
-#navbar nav #nav .nav_element .menu {
-  position: absolute;
-  background-color: #423c3cb0;
-  color: white;
-  top: 80px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s;
-}
-#navbar nav #nav .nav_element .menu li {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.4rem;
-  max-height: 900px;
-  overflow: hidden;
-  transition: background-color 0.4s;
-  transition: max-height 0.4s;
-}
-#navbar nav #nav .nav_element .menu li i {
-  margin-right: 15px;
-}
-#navbar nav #nav .nav_element .menu li .element_title {
-  padding: 10px;
-}
-#navbar nav #nav .nav_element .menu li .element_title.arrow i {
-  transform: rotate(90deg);
-}
-#navbar nav #nav .nav_element .menu li .element_title:hover {
-  background-color: #ccae8b;
-  color: black;
-  cursor: pointer;
-}
-#navbar nav #nav .nav_element .menu li .sous_menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s;
-  margin-left: 30px;
-}
-#navbar nav #nav .nav_element .menu li .sous_menu li {
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-}
-#navbar nav #nav .nav_element .menu li .sous_menu li a {
-  font-size: 1.5rem;
-  padding: 0px;
-}
-#navbar nav #nav .nav_element .menu li .sous_menu li:hover {
-  background-color: #ffd2d2;
-}
-#navbar nav #nav .nav_element .menu li .sous_menu li:hover a {
-  color: black;
-}
-#navbar nav #nav .nav_element .menu li .sous_menu.open {
-  max-height: 600px;
-}
-#navbar nav #nav .nav_element .menu li.closed {
-  max-height: 0;
-}
-#navbar nav #nav a {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  color: #fff;
-}
-#navbar nav #nav b {
-  padding: 0px 10px;
-}
-#navbar nav #nav em {
-  font-style: normal;
-}
-#navbar img {
-  height: 80px;
-  width: auto;
-}
-
-.button1 {
-  background-color: #e3001b;
-  color: white;
-  border-radius: 10px;
-  padding: 15px 20px;
-  transition: background-color 0.2s;
-  position: relative;
-  display: inline-block;
-  font-size: 1.5rem;
-  float: right;
-  margin-top: 10px;
-}
-.button1:hover {
-  background-color: #271c1c;
-}
-
-.nav_button {
-  position: relative;
-  color: black;
-  font-weight: 300;
-}
-.nav_button::before {
-  content: "";
-  position: absolute;
-  top: 45px;
-  left: 0;
-  background-color: #ccae8b;
-  height: 5px;
-  width: 0;
-  transition: width 0.4s;
-}
-.nav_button:hover::before {
-  width: 100%;
-}
-
 #landingpage {
   height: 100vh;
   width: 100vw;
@@ -249,10 +81,9 @@ h3 {
 }
 #landingpage #fond_landing_page {
   position: absolute;
-  top: 80px;
   left: -10vw;
   background-color: #2d24247b;
-  height: calc(100vh - 80px);
+  height: 100vh;
   width: 70vw;
   transform: skew(20deg);
 }
@@ -356,7 +187,7 @@ h3 {
   display: flex;
   position: absolute;
   top: 90vh;
-  left: 50vh;
+  left: 25vw;
 }
 #landingpage #nav_carousel .button_nav_carrousel {
   height: 3px;
@@ -385,9 +216,9 @@ h3 {
 }
 
 #don {
+  min-height: calc(100vh - 80px);
   display: flex;
   margin-left: 20px;
-  height: 100vh;
 }
 #don .left {
   display: flex;
@@ -398,7 +229,7 @@ h3 {
 #don .background {
   position: relative;
   background-color: #ffd2d2;
-  border-radius: 50% 0% 0% 50%;
+  border-radius: 50% 50% 50% 50%;
   height: 30vw;
   min-width: 30vw;
   display: flex;
@@ -445,7 +276,7 @@ h3 {
 
 #formations {
   padding-left: 20px;
-  height: 100vh;
+  min-height: calc(100vh - 80px);
   background-color: #423c3c;
   color: white;
 }
@@ -455,7 +286,6 @@ h3 {
 #formations img {
   height: 50vh;
   width: auto;
-  float: left;
 }
 
 @keyframes carousel {

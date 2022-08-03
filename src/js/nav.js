@@ -1,3 +1,8 @@
+//constantes
+const nav_height = 80
+
+
+
 let sous_navs_elements = document.querySelectorAll(".sous_nav_element")
 console.log(sous_navs_elements)
 let all_nav_elements = document.querySelectorAll(".nav_element")
@@ -22,7 +27,7 @@ sous_navs_elements.forEach(element => {
 });
 
 all_nav_elements.forEach(function(element){
-    element.addEventListener('mouseleave', function(){
+    element.addEventListener('mouseleave', function(){  // sourie sort du menu tous est remis a zero
         console.log("hoverout")
         let all_sous_menu = element.querySelectorAll('.sous_menu')
         for (let i = 0; i < all_sous_menu.length; i++){
@@ -32,3 +37,8 @@ all_nav_elements.forEach(function(element){
         }
     })
 })
+
+//permet de voir la nav sans cacher le titre
+window.addEventListener("hashchange", function () {
+    document.getElementById('don').scrollIntoView({behavior: "smooth", block: "end"});
+});
