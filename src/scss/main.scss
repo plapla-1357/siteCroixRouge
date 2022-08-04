@@ -303,17 +303,48 @@ $time_animation: 75s;
 }
 
 #formations{
-    // display: flex;
     padding-left: 20px;
     min-height: calc(100vh - $nav_height);
     background-color:$nav_grey_no_transparent;
     color: white;
+    .text{
+        margin: 0 30px;
+    }
+    .content{
+        
+        height: 80vh;
+        display:flex;
+        align-items: center;
+    }
     h2{
         color: white;
     }
     img{
-        height:50vh;
-        width: auto;
+        width: 30vw;
+        height: auto;
+        position: relative;
+        
+    }
+    .imgWrapper{
+        position: relative;
+        &::before{
+            content:"";
+            background-color: $uniform_grey;
+            border-radius: 50%;
+            height: 150%;
+            width: 150%;
+            position: absolute;
+            top: -25%;
+            left: -50%;
+            
+        }
+    }
+    li{
+        font-size: 1.5rem;
+        margin-left: 10rem;
+    }
+    ul{
+        margin: 3rem 0;
     }
 }
 

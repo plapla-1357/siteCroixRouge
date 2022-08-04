@@ -30,10 +30,10 @@
 <body>
   <!-- navbar -->
   <section id="navbar">
-    <img src="./src/img/logoText.png" alt="logo croix rouge française" />
     <div id="burger">
-      <span>helo</span>
+      <div class="barre"></div>
     </div>
+    <img src="./src/img/logoText.png" alt="logo croix rouge française" />
     <nav>
       <ul id="nav">
         <!-- structure -->
@@ -379,14 +379,14 @@
       </div>
     </div>
     <div id="nav_carousel">
-      <span class="button_nav_carrousel"></span>
-      <span class="button_nav_carrousel"></span>
-      <span class="button_nav_carrousel"></span>
-      <span class="button_nav_carrousel"></span>
-      <span class="button_nav_carrousel"></span>
-      <span class="button_nav_carrousel"></span>
-      <span class="button_nav_carrousel"></span>
-      <span class="button_nav_carrousel"></span>
+      <span class="button_nav_carrousel" style="--i:0"></span>
+      <span class="button_nav_carrousel" style="--i:1"></span>
+      <span class="button_nav_carrousel" style="--i:2"></span>
+      <span class="button_nav_carrousel" style="--i:3"></span>
+      <span class="button_nav_carrousel" style="--i:4"></span>
+      <span class="button_nav_carrousel" style="--i:5"></span>
+      <span class="button_nav_carrousel" style="--i:6"></span>
+      <span class="button_nav_carrousel" style="--i:7"></span>
       <span id="selector"></span>
     </div>
   </section>
@@ -418,8 +418,35 @@
   </section>
   <section id="formations">
     <h2>Formations <a href="/" class="button1"> <i class="fa-solid fa-chevron-right"></i> En savoir plus...</a></h2>
-    <img src="src/img/formation.jpg" alt="">
-    <p>Dans le secteur de la formation initiale, La Croix-Rouge française forme chaque année 14.000 élèves. Nos professionnels assurent, au sein de nos 102 écoles, la formation de 12% du personnel diplômé en France dans les formations :</p>
+    <div class="content">
+      <div class="imgWrapper">
+        <img src="src/img/formation.jpg" alt="">
+      </div>
+      <div class="text">
+        <p>
+          Dans le secteur de la formation initiale, La Croix-Rouge française forme chaque année 14.000 élèves. Nos professionnels assurent, au sein de nos 102 écoles, la formation de 12% du personnel diplômé en France dans les formations :
+        </p>
+        <ul>
+          <li>Infimier</li>
+          <li>aide soignant</li>
+          <li>Secrétaire médical</li>
+          <li>Assistant de service social</li>
+          <li>Cadre de santé</li>
+          <li>Masseur kinésithérapeute</li>
+          <li>...</li>
+        </ul>
+        <p>
+          lorem id ipsum dolor nsectetur adipis lorem lorem id ipsum dolor sit amet,
+          consectetur adipis lorem lorem id ipsum dolor sit amet, consectetur
+          adipis lorem lorem id ipsum dolor sit amet
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="actualités">
+    <h2>Actualités <a href="/" class="button1"> <i class="fa-solid fa-chevron-right"></i> Autres Actualités...</a></h2>
+
   </section>
 
 
@@ -428,7 +455,11 @@
 
   <footer>
     <div id="infos">
-      <div class="info"><i class="fa-solid fa-location-dot"></i> 98 rue Didot, 75694 Paris Cedex 14</div>
+      <div class="info">
+        <a href="https://www.google.com/maps/place/Institut+R%C3%A9gional+de+Formation+Sanitaire+et+Sociale+Croix-Rouge+Fran%C3%A7aise/@48.8295749,2.3114398,1182m/data=!3m1!1e3!4m13!1m7!3m6!1s0x47e6717d19509fa9:0xf6ebb947bb820f72!2s98+Rue+Didot,+75014+Paris!3b1!8m2!3d48.827316!4d2.314338!3m4!1s0x47e6704e6cdc27b7:0xe53bbc518448fc53!8m2!3d48.8277051!4d2.3126011?hl=fr">
+          <i class="fa-solid fa-location-dot"></i> 98 rue Didot, 75694 Paris Cedex 14
+        </a> 
+      </div>
       <div class="info"><i class="fa-solid fa-phone"></i> +33 (0)1 44 43 11 00</div>
       <div class="all_resaux">
         <a href="https://twitter.com/CroixRouge" target="blank" class="resaux twitter"><div class="wrapper"><i class="fa-brands fa-twitter"></i></div></a>

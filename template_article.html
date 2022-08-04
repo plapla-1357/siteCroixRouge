@@ -12,7 +12,7 @@
   <script src="src/js/nav.js" defer></script>
 
   <!-- css -->
-  <link rel="stylesheet" href="./src/css/main.css" />
+  <link rel="stylesheet" href="./src/css/nav.css">
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,8 +29,21 @@
   <!-- navbar -->
   <section id="navbar">
     <img src="./src/img/logoText.png" alt="logo croix rouge française" />
+    <div id="burger">
+      <span>helo</span>
+    </div>
     <nav>
       <ul id="nav">
+        <!-- structure -->
+            <!-- 
+              li.nav_element
+                ul.menu
+                  li.sous_nav_element
+                    ul.sous_menu 
+                      li
+
+             -->
+        <!-- //structure -->
         <li class="nav_element">
           <a href="/" class="nav_button"><i class="fa-solid fa-chevron-down"></i> <b>La Croix-Rouge</b>
           </a>
@@ -41,11 +54,11 @@
                 international
               </div>
               <ul class="sous_menu">
-                <li>Origine</li>
-                <li>Organisation</li>
-                <li>7 principes fondateurs</li>
-                <li>Un embleme protecteur</li>
-                <li>Les convension de genève</li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Origine </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Organisation </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>7 principes fondateurs </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Un embleme protecteur </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Les convension de genève </a></li>
               </ul>
             </li>
             <li class="sous_nav_element">
@@ -53,29 +66,60 @@
                 <i class="fa-solid fa-chevron-right"></i> La Croix-Rouge
                 Française
               </div>
+              <ul class="sous_menu">
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Cartes D'identité </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Notre histoire </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Organisation et fonctionnement </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Transformation et RSO </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Ressource et transparence </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Offres de services au collectivités </a></li>
+
+              </ul>
             </li>
             <li class="sous_nav_element">
               <div class="element_title">
                 <i class="fa-solid fa-chevron-right"></i> Droit International
                 Humanitaire
               </div>
+              <ul class="sous_menu">
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Comprendre le Droit International Humanitaire </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>5 principe fondamentaux </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Faire respecter le DIH </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Difuser le DIH </a></li>
+              </ul>
             </li>
             <li class="sous_nav_element">
               <div class="element_title">
                 <i class="fa-solid fa-chevron-right"></i> Fondation
                 Croix-Rouge Française
               </div>
+              <ul class="sous_menu">
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>En savoir plus ... </a></li>
+              </ul>
             </li>
             <li class="sous_nav_element">
               <div class="element_title">
                 <i class="fa-solid fa-chevron-right"></i> Croix-Rouge
                 Insertion
               </div>
+              <ul class="sous_menu">
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Presentation </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Filières et Solutions </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Etablissements </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Filiales </a></li>
+                
+              </ul>
             </li>
             <li class="sous_nav_element">
               <div class="element_title">
                 <i class="fa-solid fa-chevron-right"></i> Innovation Social
               </div>
+              <ul class="sous_menu">
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>L'innovation Social à la Croix-Rouge Française </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Croix-Rouge mobilité </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>21: l'accelerateur d'innovations sociales </a></li>
+                <li><a href="/"> <i class="fa-solid fa-arrow-right-long"></i>Projets </a></li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -178,7 +222,7 @@
           </ul>
         </li>
         <li class="nav_element">
-          <a href="/" class="button1"><em>DONNEZ</em></a>
+          <a href="#don" class="button1"><em>DONNEZ</em></a>
         </li>
       </ul>
     </nav>

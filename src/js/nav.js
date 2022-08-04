@@ -4,24 +4,24 @@ const nav_height = 80
 
 
 let sous_navs_elements = document.querySelectorAll(".sous_nav_element")
-console.log(sous_navs_elements)
 let all_nav_elements = document.querySelectorAll(".nav_element")
 
 sous_navs_elements.forEach(element => {
     element.addEventListener('click', function(){
-        
-        let a = element.querySelector('.sous_menu')
-        if (a.classList.contains('open')){
-            a.parentElement.classList.add('closed')
+        let a = element.querySelector('.sous_menu')       
+        let all_sous_menu = element.parentElement.parentElement.querySelectorAll('.sous_menu')
+        let open = false
+        if(a.classList.contains('open')){
+            open = true
         }
-        a.classList.toggle('open')
-        a.parentElement.querySelector('.element_title').classList.toggle('arrow')
+        all_sous_menu.forEach(function(sous_menu){
+            sous_menu.classList.remove('open')
+            sous_menu.parentElement.querySelector('.element_title').classList.remove('arrow')
+        })
         
-        let all_sous_menu = element.parentElement.parentElement.querySelectorAll('.sous_menu:not(.open)')
-        console.log(all_sous_menu)
-        for (let i = 0; i < all_sous_menu.length; i++){
-            all_sous_menu[i].parentElement.classList.toggle('closed')
-            all_sous_menu[i].classList.remove('open')          
+        if (!open){
+            a.parentElement.querySelector('.element_title').classList.add('arrow')
+            a.classList.add('open')
         }
     })
 });
@@ -32,7 +32,7 @@ all_nav_elements.forEach(function(element){
         let all_sous_menu = element.querySelectorAll('.sous_menu')
         for (let i = 0; i < all_sous_menu.length; i++){
             all_sous_menu[i].classList.remove('open')
-            all_sous_menu[i].parentElement.classList.remove('closed')
+            // all_sous_menu[i].parentElement.classList.remove('closed')
             all_sous_menu[i].parentElement.querySelector('.element_title').classList.remove('arrow')
         }
     })
@@ -42,3 +42,9 @@ all_nav_elements.forEach(function(element){
 window.addEventListener("hashchange", function () {
     document.getElementById('don').scrollIntoView({behavior: "smooth", block: "end"});
 });
+
+let burger = document.getElementById("burger");
+let nav = document.getElementById("nav");
+burger.addEventListener("click", function (e) {
+    nav.classList.toggle('open')
+})

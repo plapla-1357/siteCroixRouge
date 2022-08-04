@@ -280,12 +280,41 @@ h3 {
   background-color: #423c3c;
   color: white;
 }
+#formations .text {
+  margin: 0 30px;
+}
+#formations .content {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
 #formations h2 {
   color: white;
 }
 #formations img {
-  height: 50vh;
-  width: auto;
+  width: 30vw;
+  height: auto;
+  position: relative;
+}
+#formations .imgWrapper {
+  position: relative;
+}
+#formations .imgWrapper::before {
+  content: "";
+  background-color: #ccae8b;
+  border-radius: 50%;
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  top: -25%;
+  left: -50%;
+}
+#formations li {
+  font-size: 1.5rem;
+  margin-left: 10rem;
+}
+#formations ul {
+  margin: 3rem 0;
 }
 
 @keyframes carousel {

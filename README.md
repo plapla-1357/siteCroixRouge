@@ -12,12 +12,12 @@ concours frontend site nouveaux site de la croix rouge française
     <li> santé et autonomie </li>
     <li> urgence et secourisme </li>
     <li> Jeunesse </li>
-<ul>
+</ul>
 
-resaux:
+## resaux:
 
-https://www.youtube.com/user/CroixRougeFR
-https://twitter.com/CroixRouge
-https://www.facebook.com/fr.CroixRouge
-https://www.instagram.com/croixrougefr/
+https://www.youtube.com/user/CroixRougeFR <br>
+https://twitter.com/CroixRouge <br>
+https://www.facebook.com/fr.CroixRouge <br>
+https://www.instagram.com/croixrougefr/ <br>
 https://www.tiktok.com/@croixrougefr
