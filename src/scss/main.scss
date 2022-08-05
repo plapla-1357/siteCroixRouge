@@ -263,6 +263,7 @@ $time_animation: 75s;
     // min-height: calc(100vh - $nav_height);
     background-color:$nav_grey_no_transparent;
     color: white;
+    overflow: hidden;
     .text{
         margin: 0 30px;
     }
@@ -273,6 +274,8 @@ $time_animation: 75s;
     }
     h2{
         color: white;
+        position: relative;
+        z-index: 2;
     }
     img{
         width: 30vw;
@@ -291,6 +294,7 @@ $time_animation: 75s;
             position: absolute;
             top: -25%;
             left: -50%;
+            z-index: 0;
             
         }
     }

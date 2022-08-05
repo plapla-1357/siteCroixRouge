@@ -21,9 +21,13 @@ $landing_page_grey_no_transparent: #2d2424;
     border-right: 2px solid $uniform_grey;
     width: 20%;
     margin-top: 80px;
+    i{
+        display: none;
+    }
 
     h3{
         text-align: initial;
+        font-size: 4rem;
     }
     h4{
         font-size: 2rem;
@@ -82,4 +86,29 @@ $landing_page_grey_no_transparent: #2d2424;
     float: left;
     max-height: 25vw;
     max-width: 20vw;
+}
+
+@media screen and (max-width: 900px){
+    #center{
+        flex-direction: column;
+    }   
+    #article{
+        width: 80%;
+        margin-top: 0;
+    }
+    #side_bar{
+        i{
+            display: inline;
+        }
+        max-height: 9rem;
+        overflow: hidden;
+        border:  5px solid $uniform_grey;
+        width: 80%;
+        margin: 0 10%;
+        margin-top:calc( $nav_height + 20px);
+        transition: max-height 0.4s;
+        &.open{
+            max-height: 200vh;
+        }
+    }
 }

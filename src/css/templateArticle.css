@@ -7,8 +7,12 @@
   width: 20%;
   margin-top: 80px;
 }
+#side_bar i {
+  display: none;
+}
 #side_bar h3 {
   text-align: initial;
+  font-size: 4rem;
 }
 #side_bar h4 {
   font-size: 2rem;
@@ -66,6 +70,33 @@
   float: left;
   max-height: 25vw;
   max-width: 20vw;
+}
+
+@media screen and (max-width: 900px) {
+  #center {
+    flex-direction: column;
+  }
+
+  #article {
+    width: 80%;
+    margin-top: 0;
+  }
+
+  #side_bar {
+    max-height: 9rem;
+    overflow: hidden;
+    border: 5px solid #ccae8b;
+    width: 80%;
+    margin: 0 10%;
+    margin-top: 100px;
+    transition: max-height 0.4s;
+  }
+  #side_bar i {
+    display: inline;
+  }
+  #side_bar.open {
+    max-height: 200vh;
+  }
 }
 
 /*# sourceMappingURL=templateArticle.css.map */
