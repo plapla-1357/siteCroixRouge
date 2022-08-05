@@ -13,6 +13,7 @@ $landing_page_grey: #2d24247b;
 p{
     font-size: 1.6rem;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 a{
@@ -53,6 +54,12 @@ h3{
     font-size: 3rem;
     text-align: center;
     margin: 20px;
+}
+h4{
+    font-size: 2.2rem;
+    margin: 20px;
+    border-left: 3px solid $main_red;
+    padding: 10px;
 }
 
 
@@ -346,6 +353,58 @@ $time_animation: 75s;
     ul{
         margin: 3rem 0;
     }
+}
+
+#actualites{
+    padding-left: 20px;
+    min-height: calc(100vh - $nav_height);
+    #all_actus{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .card{
+        overflow: hidden;
+        color: black;
+        border: 1px solid $landing_page_grey;
+        height: 450px;
+        border-radius: 10px;
+        margin: 20px;
+        img{
+            margin: 5% 5% 0 5%;
+            height: auto;
+        }
+        transition: box-shadow 0.4s;
+        &:hover{ 
+            box-shadow: 5px 5px 10px $nav_grey_transparent;
+        }
+    }
+    .card_actu{
+        width: 300px;
+        img{
+            width: 90%;
+        }
+    }
+    .card_actu_importante{
+        width: 600px;
+        img{
+            width: 45%;
+        }
+        .img_container{
+            display: flex;
+        }
+        .title{
+            display: flex;
+            align-items: center;
+            h4{
+                margin: 0;
+            }
+        }
+    }
+    p{
+        margin: 20px;
+    }
+
 }
 
 

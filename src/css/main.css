@@ -1,6 +1,7 @@
 p {
   font-size: 1.6rem;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 a {
@@ -40,6 +41,13 @@ h3 {
   font-size: 3rem;
   text-align: center;
   margin: 20px;
+}
+
+h4 {
+  font-size: 2.2rem;
+  margin: 20px;
+  border-left: 3px solid #e3001b;
+  padding: 10px;
 }
 
 #landingpage {
@@ -315,6 +323,57 @@ h3 {
 }
 #formations ul {
   margin: 3rem 0;
+}
+
+#actualites {
+  padding-left: 20px;
+  min-height: calc(100vh - 80px);
+}
+#actualites #all_actus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#actualites .card {
+  overflow: hidden;
+  color: black;
+  border: 1px solid #2d24247b;
+  height: 450px;
+  border-radius: 10px;
+  margin: 20px;
+  transition: box-shadow 0.4s;
+}
+#actualites .card img {
+  margin: 5% 5% 0 5%;
+  height: auto;
+}
+#actualites .card:hover {
+  box-shadow: 5px 5px 10px #423c3cb0;
+}
+#actualites .card_actu {
+  width: 300px;
+}
+#actualites .card_actu img {
+  width: 90%;
+}
+#actualites .card_actu_importante {
+  width: 600px;
+}
+#actualites .card_actu_importante img {
+  width: 45%;
+}
+#actualites .card_actu_importante .img_container {
+  display: flex;
+}
+#actualites .card_actu_importante .title {
+  display: flex;
+  align-items: center;
+}
+#actualites .card_actu_importante .title h4 {
+  margin: 0;
+}
+#actualites p {
+  margin: 20px;
 }
 
 @keyframes carousel {
