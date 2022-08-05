@@ -48,3 +48,48 @@ let nav = document.getElementById("nav");
 burger.addEventListener("click", function (e) {
     nav.classList.toggle('open')
 })
+
+
+
+window.addEventListener('resize', function () {
+    if(window.innerWidth < 1100){
+        all_nav_elements.forEach((element) => {
+            element.classList.add('nohover')
+            element.querySelector('a').removeAttribute('href')
+        })
+    }
+})
+window.addEventListener('load', function () {
+    if(window.innerWidth < 1100){
+        all_nav_elements.forEach((element) => {
+            element.classList.add('nohover')
+            element.querySelector('a').removeAttribute('href')
+        })
+    }
+})
+
+all_nav_elements.forEach(element => {
+    let nav_button = element.querySelector('.nav_button')
+    console.log(nav_button)
+    if (nav_button){
+
+        nav_button.addEventListener('click', function(){
+            console.log("click")
+            let a = nav_button.parentElement.querySelector('.menu')       
+            let all_menu = nav_button.parentElement.parentElement.querySelectorAll('.menu')
+            let open = false
+            if(a.classList.contains('open')){
+                open = true
+            }
+            all_menu.forEach(function(menu){
+                menu.classList.remove('open')
+                menu.parentElement.querySelector('.element_title').classList.remove('arrow')
+            })
+            
+            if (!open){
+                a.parentElement.querySelector('.element_title').classList.add('arrow')
+                a.classList.add('open')
+            }
+        })
+    }
+});

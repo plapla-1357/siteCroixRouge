@@ -1,5 +1,5 @@
 # siteCroixRouge
-concours frontend site nouveaux site de la croix rouge française
+voila mon site web pour la croix rouge. Je n'aurrait probalement pas le temps de faire tous ce que je voulais faire car je dois partir en vacances avant la dead line mais j'aurais fais de mon mieux
 
 ## axe de la croix Rouge
 

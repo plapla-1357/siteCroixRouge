@@ -1,0 +1,71 @@
+#center {
+  display: flex;
+}
+
+#side_bar {
+  border-right: 2px solid #ccae8b;
+  width: 20%;
+  margin-top: 80px;
+}
+#side_bar h3 {
+  text-align: initial;
+}
+#side_bar h4 {
+  font-size: 2rem;
+  color: black;
+  padding: 5px;
+  margin-left: 60px;
+  transition: color 0.4s;
+}
+#side_bar h4:hover {
+  color: #e3001b;
+}
+#side_bar h2 {
+  font-size: 2.4rem;
+  transition: color 0.4s;
+}
+#side_bar h2::before {
+  top: 2.6rem;
+}
+#side_bar h2:hover {
+  color: #e3001b;
+}
+
+#article {
+  width: 60%;
+  margin: 10%;
+  margin-top: 80px;
+}
+#article h1 {
+  font-size: 7rem;
+}
+#article h2 {
+  margin-top: 40px;
+  font-size: 5rem;
+  margin-left: -60px;
+}
+#article h4 {
+  margin-left: 0;
+}
+#article h1 {
+  color: black;
+}
+#article p {
+  text-align: justify;
+}
+
+.incruste {
+  margin: 20px;
+  float: right;
+  max-height: 25vw;
+  max-width: 20vw;
+}
+
+.incruste_left {
+  margin: 20px;
+  float: left;
+  max-height: 25vw;
+  max-width: 20vw;
+}
+
+/*# sourceMappingURL=templateArticle.css.map */

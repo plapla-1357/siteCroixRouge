@@ -1,0 +1,85 @@
+
+$nav_height: 80px;
+
+// pallette de couleur
+
+$main_red: #e3001b;
+$main_red_transparent: #e3001a72;
+$light_red: #ffd2d2;
+$uniform_grey: #ccae8b;
+$nav_grey_transparent: #423c3cb0;
+$nav_grey_no_transparent: #423c3c;
+$landing_page_grey: #2d24247b;
+$landing_page_grey_no_transparent: #2d2424;
+
+
+#center{
+    display: flex;
+}
+
+#side_bar{
+    border-right: 2px solid $uniform_grey;
+    width: 20%;
+    margin-top: 80px;
+
+    h3{
+        text-align: initial;
+    }
+    h4{
+        font-size: 2rem;
+        color: black;
+        padding: 5px;
+        margin-left: 60px;
+        transition: color 0.4s;
+        &:hover{
+            color: $main_red;
+        }
+    }
+    h2{
+        font-size: 2.4rem;
+        &::before{
+            top: 2.6rem;
+        }
+        transition: color 0.4s;
+        &:hover{
+            color: $main_red;
+        }
+    }
+}
+#article{
+    h1{
+        font-size: 7rem;
+    }
+    h2{
+        margin-top: 40px;
+        font-size: 5rem;
+        margin-left: -60px;
+    }
+    h4{
+        margin-left: 0;
+    }
+    h1{
+
+        color:black;
+    }
+    p{
+
+        text-align: justify;
+    }
+    width: 60%;
+    margin: 10%;
+    margin-top: 80px;
+}
+
+.incruste{
+    margin: 20px;
+    float: right;
+    max-height: 25vw;
+    max-width: 20vw;
+}
+.incruste_left{
+    margin: 20px;
+    float: left;
+    max-height: 25vw;
+    max-width: 20vw;
+}

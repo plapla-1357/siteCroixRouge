@@ -9,9 +9,10 @@ html {
   font-size: 10px;
   font-style: regular;
   overflow: overlay;
+  position: relative;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar, ::-webkit-scrollbar-corner {
   width: 10px;
   height: 10px;
   background: rgba(0, 0, 0, 0.2);
@@ -27,8 +28,62 @@ html {
   background-color: #e3001a72;
 }
 
+p {
+  font-size: 1.6rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+i {
+  margin-right: 15px;
+  transition: transfrom 0.4s;
+}
+
+h1 {
+  color: white;
+  font-size: 6rem;
+  text-align: center;
+  margin: 20px;
+}
+
+h2 {
+  color: black;
+  font-size: 6rem;
+  margin: 20px;
+  position: relative;
+}
+h2:before {
+  content: "";
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  height: 2px;
+  width: 95%;
+  background-color: #e3001b;
+}
+
+h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px;
+}
+
+h4 {
+  font-size: 2.2rem;
+  margin: 20px;
+  border-left: 3px solid #e3001b;
+  padding: 10px;
+}
+
 #navbar {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -70,6 +125,7 @@ html {
 }
 #navbar nav #nav.open {
   max-height: 900px;
+  overflow: scroll;
 }
 #navbar nav #nav .nav_element {
   position: relative;
@@ -79,7 +135,8 @@ html {
   height: 100%;
   padding: 0px 30px 0px 10px;
 }
-#navbar nav #nav .nav_element:hover .menu {
+#navbar nav #nav .nav_element:hover #navbar nav #nav .nav_element:not(.nohover) .menu,
+#navbar nav #nav .nav_element .menu.open {
   max-height: 800px;
   border: 1px solid #2d2424;
 }
@@ -119,7 +176,7 @@ html {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 #navbar nav #nav .nav_element .menu li .sous_menu li {
   padding: 10px;
@@ -199,12 +256,16 @@ footer {
   border: 2px solid #2d2424;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 footer #infos {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+footer .legal {
+  padding: 20px;
 }
 footer .info {
   color: white;
@@ -267,24 +328,96 @@ footer .legal {
   justify-content: space-evenly;
 }
 
+.cards {
+  padding-left: 20px;
+  min-height: calc(100vh - 80px);
+}
+.cards #all_actus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cards .card {
+  overflow: hidden;
+  color: black;
+  border: 1px solid #2d24247b;
+  height: 450px;
+  border-radius: 10px;
+  margin: 20px;
+  transition: box-shadow 0.4s;
+}
+.cards .card img {
+  margin: 5% 5% 0 5%;
+  height: auto;
+}
+.cards .card:hover {
+  box-shadow: 5px 5px 10px #423c3cb0;
+}
+.cards .card_actu {
+  width: 300px;
+}
+.cards .card_actu img {
+  width: 90%;
+}
+.cards .card_actu_importante {
+  width: 600px;
+}
+.cards .card_actu_importante img {
+  width: 45%;
+}
+.cards .card_actu_importante .img_container {
+  display: flex;
+}
+.cards .card_actu_importante .title {
+  display: flex;
+  align-items: center;
+}
+.cards .card_actu_importante .title h4 {
+  margin: 0;
+}
+.cards p {
+  margin: 20px;
+}
+
 @media screen and (max-width: 1100px) {
   html {
     font-size: 8px;
   }
 
-  #nav {
+  #navbar #burger {
+    display: block;
+  }
+  #navbar nav #nav {
     background-color: #ccae8b;
     position: absolute;
     top: 80px;
-    overflow: hidden;
     left: 0;
     max-height: 0;
     flex-direction: column;
     transition: max-height;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    width: 100vw;
+    align-items: center;
+  }
+  #navbar nav #nav .element_title {
+    background-color: #423c3c;
+    z-index: 2;
+  }
+  #navbar nav #nav .nav_element {
+    width: 50vw;
+    flex-direction: column;
+  }
+  #navbar nav #nav .nav_element .menu {
+    position: relative;
+    top: 0;
+  }
+  #navbar nav #nav .nav_element .menu:hover .menu {
+    max-height: 0px;
   }
 
-  #navbar #burger {
-    display: block;
+  .nav_button::before {
+    background-color: #423c3c;
   }
 }
 
